@@ -14,3 +14,11 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+
+
+
+<p align="center"> 
+  访客统计<br>
+  <img src="https://profile-counter.glitch.me/daweedkob/count.svg" />
+</p>
