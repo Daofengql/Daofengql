@@ -16,9 +16,7 @@ Here are some ideas to get you started:
 -->
 
 
-
-
 <p align="center"> 
   访客统计<br>
-  <img src="https://profile-counter.glitch.me/daweedkob/count.svg" />
+  <img src="https://profile-counter.glitch.me/daofengql/count.svg" />
 </p>
