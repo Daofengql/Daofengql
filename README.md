@@ -1,4 +1,3 @@
-# 欢迎来到我的 GitHub 主页！👋
 
 ### 🐉 关于我
 
@@ -40,7 +39,7 @@
 
 - **邮箱**: [daofengqianlin@silverdragon.cn](mailto:daofengqianlin@silverdragon.cn)  
 - **博客**: [www.silverdragon.cn](https://www.silverdragon.cn)  
-- **Twitter**: [@DaofengQL](https://twitter.com/DaofengQL)  
+- **Twitter**: [@daofengqianlin](https://x.com/daofengqianlin)
 
 如果你喜欢我的项目或创作，请给我一个 **Star** ⭐！
 
