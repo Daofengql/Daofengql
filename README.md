@@ -42,8 +42,3 @@
 - **Twitter**: [@daofengqianlin](https://x.com/daofengqianlin)
 
 如果你喜欢我的项目或创作，请给我一个 **Star** ⭐！
-
-<p align="center"> 
-  访客统计<br>
-  <img src="https://profile-counter.glitch.me/daofengql/count.svg" />
-</p>
