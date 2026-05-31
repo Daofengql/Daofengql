@@ -1,46 +1,307 @@
-<svg width="350" height="165" viewBox="0 0 350 165" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Daofeng Qianlin stack map</title>
-  <desc id="desc">A compact map of languages, platforms, and tools.</desc>
-  <style>
-    .title { font: 700 18px "Segoe UI", Ubuntu, sans-serif; fill: #ff79c6; }
-    .name { font: 600 12px "Segoe UI", Ubuntu, sans-serif; fill: #f8f8f2; }
-    .note { font: 500 11px "Segoe UI", Ubuntu, sans-serif; fill: #b8b8c8; }
-    .bar { animation: grow .9s ease-out forwards; transform-origin: left; transform-box: fill-box; transform: scaleX(0); }
-    @keyframes grow { to { transform: scaleX(1); } }
-  </style>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="350" y2="165">
-      <stop stop-color="#141321"/>
-      <stop offset="1" stop-color="#1f1630"/>
-    </linearGradient>
-    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#ff79c6"/>
-      <stop offset=".5" stop-color="#ffb86c"/>
-      <stop offset="1" stop-color="#8be9fd"/>
-    </linearGradient>
-  </defs>
-  <rect width="350" height="165" rx="14" fill="url(#bg)"/>
-  <text x="24" y="34" class="title">Stack Map</text>
-  <text x="250" y="34" class="note">mixed-field</text>
-  <g transform="translate(24 54)">
-    <text x="0" y="10" class="name">C / C++</text>
-    <rect x="92" y="1" width="205" height="12" rx="6" fill="#2a213b"/>
-    <rect class="bar" x="92" y="1" width="178" height="12" rx="6" fill="url(#bar)"/>
-  </g>
-  <g transform="translate(24 78)">
-    <text x="0" y="10" class="name">Go / Python</text>
-    <rect x="92" y="1" width="205" height="12" rx="6" fill="#2a213b"/>
-    <rect class="bar" x="92" y="1" width="164" height="12" rx="6" fill="url(#bar)" style="animation-delay:.1s"/>
-  </g>
-  <g transform="translate(24 102)">
-    <text x="0" y="10" class="name">TypeScript</text>
-    <rect x="92" y="1" width="205" height="12" rx="6" fill="#2a213b"/>
-    <rect class="bar" x="92" y="1" width="145" height="12" rx="6" fill="url(#bar)" style="animation-delay:.2s"/>
-  </g>
-  <g transform="translate(24 126)">
-    <text x="0" y="10" class="name">HW / Linux</text>
-    <rect x="92" y="1" width="205" height="12" rx="6" fill="#2a213b"/>
-    <rect class="bar" x="92" y="1" width="188" height="12" rx="6" fill="url(#bar)" style="animation-delay:.3s"/>
-  </g>
-  <text x="24" y="154" class="note">STM32 · ESP32 · Rockchip · React · Docker · MinIO/S3</text>
-</svg>
+
+      <svg
+        width="350"
+        height="215"
+        viewBox="0 0 350 215"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        role="img"
+        aria-labelledby="descId"
+      >
+        <title id="titleId"></title>
+        <desc id="descId"></desc>
+        <style>
+          .header {
+            font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+            fill: #fe428e;
+            animation: fadeInAnimation 0.8s ease-in-out forwards;
+          }
+          @supports(-moz-appearance: auto) {
+            /* Selector detects Firefox */
+            .header { font-size: 15.5px; }
+          }
+          
+    @keyframes slideInAnimation {
+      from {
+        width: 0;
+      }
+      to {
+        width: calc(100%-100px);
+      }
+    }
+    @keyframes growWidthAnimation {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    .stat {
+      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #a9fef7;
+    }
+    @supports(-moz-appearance: auto) {
+      /* Selector detects Firefox */
+      .stat { font-size:12px; }
+    }
+    .bold { font-weight: 700 }
+    .lang-name {
+      font: 400 11px "Segoe UI", Ubuntu, Sans-Serif;
+      fill: #a9fef7;
+    }
+    .stagger {
+      opacity: 0;
+      animation: fadeInAnimation 0.3s ease-in-out forwards;
+    }
+    #rect-mask rect{
+      animation: slideInAnimation 1s ease-in-out forwards;
+    }
+    .lang-progress{
+      animation: growWidthAnimation 0.6s ease-in-out forwards;
+    }
+    
+
+          
+      /* Animations */
+      @keyframes scaleInAnimation {
+        from {
+          transform: translate(-5px, 5px) scale(0);
+        }
+        to {
+          transform: translate(-5px, 5px) scale(1);
+        }
+      }
+      @keyframes fadeInAnimation {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    
+          
+        </style>
+
+        
+
+        <rect
+          data-testid="card-bg"
+          x="0.5"
+          y="0.5"
+          rx="4.5"
+          height="99%"
+          stroke="#e4e2e2"
+          width="349"
+          fill="#141321"
+          stroke-opacity="0"
+        />
+
+        
+      <g
+        data-testid="card-title"
+        transform="translate(25, 35)"
+      >
+        <g transform="translate(0, 0)">
+      <text
+        x="0"
+        y="0"
+        class="header"
+        data-testid="header"
+      >Most Used Languages</text>
+    </g>
+      </g>
+    
+
+        <g
+          data-testid="main-card-body"
+          transform="translate(0, 55)"
+        >
+          
+    <svg data-testid="lang-items" x="25">
+      
+  
+      <mask id="rect-mask">
+          <rect x="0" y="0" width="300" height="8" fill="white" rx="5"/>
+        </mask>
+        
+        <rect
+          mask="url(#rect-mask)"
+          data-testid="lang-progress"
+          x="0"
+          y="0"
+          width="206.23"
+          height="8"
+          fill="#555555"
+        />
+      
+        <rect
+          mask="url(#rect-mask)"
+          data-testid="lang-progress"
+          x="206.23"
+          y="0"
+          width="27.44"
+          height="8"
+          fill="#00ADD8"
+        />
+      
+        <rect
+          mask="url(#rect-mask)"
+          data-testid="lang-progress"
+          x="233.67"
+          y="0"
+          width="25.82"
+          height="8"
+          fill="#3178c6"
+        />
+      
+        <rect
+          mask="url(#rect-mask)"
+          data-testid="lang-progress"
+          x="259.49"
+          y="0"
+          width="21.12"
+          height="8"
+          fill="#f34b7d"
+        />
+      
+        <rect
+          mask="url(#rect-mask)"
+          data-testid="lang-progress"
+          x="280.61"
+          y="0"
+          width="10.14"
+          height="8"
+          fill="#3572A5"
+        />
+      
+        <rect
+          mask="url(#rect-mask)"
+          data-testid="lang-progress"
+          x="290.75"
+          y="0"
+          width="16.08"
+          height="8"
+          fill="#6E4C13"
+        />
+      
+        <rect
+          mask="url(#rect-mask)"
+          data-testid="lang-progress"
+          x="296.83"
+          y="0"
+          width="12.07"
+          height="8"
+          fill="#e34c26"
+        />
+      
+        <rect
+          mask="url(#rect-mask)"
+          data-testid="lang-progress"
+          x="298.9"
+          y="0"
+          width="10.81"
+          height="8"
+          fill="#DA3434"
+        />
+      
+        <rect
+          mask="url(#rect-mask)"
+          data-testid="lang-progress"
+          x="299.71"
+          y="0"
+          width="10.15"
+          height="8"
+          fill="#701516"
+        />
+      
+        <rect
+          mask="url(#rect-mask)"
+          data-testid="lang-progress"
+          x="299.85999999999996"
+          y="0"
+          width="10.14"
+          height="8"
+          fill="#427819"
+        />
+      
+      
+    <g transform="translate(0, 25)">
+      <g transform="translate(0, 0)"><g transform="translate(0, 0)">
+    <g class="stagger" style="animation-delay: 450ms">
+      <circle cx="5" cy="6" r="5" fill="#555555" />
+      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+        C 68.74%
+      </text>
+    </g>
+  </g><g transform="translate(0, 25)">
+    <g class="stagger" style="animation-delay: 600ms">
+      <circle cx="5" cy="6" r="5" fill="#00ADD8" />
+      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+        Go 9.15%
+      </text>
+    </g>
+  </g><g transform="translate(0, 50)">
+    <g class="stagger" style="animation-delay: 750ms">
+      <circle cx="5" cy="6" r="5" fill="#3178c6" />
+      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+        TypeScript 8.61%
+      </text>
+    </g>
+  </g><g transform="translate(0, 75)">
+    <g class="stagger" style="animation-delay: 900ms">
+      <circle cx="5" cy="6" r="5" fill="#f34b7d" />
+      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+        C++ 7.04%
+      </text>
+    </g>
+  </g><g transform="translate(0, 100)">
+    <g class="stagger" style="animation-delay: 1050ms">
+      <circle cx="5" cy="6" r="5" fill="#3572A5" />
+      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+        Python 3.38%
+      </text>
+    </g>
+  </g></g><g transform="translate(150, 0)"><g transform="translate(0, 0)">
+    <g class="stagger" style="animation-delay: 450ms">
+      <circle cx="5" cy="6" r="5" fill="#6E4C13" />
+      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+        Assembly 2.03%
+      </text>
+    </g>
+  </g><g transform="translate(0, 25)">
+    <g class="stagger" style="animation-delay: 600ms">
+      <circle cx="5" cy="6" r="5" fill="#e34c26" />
+      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+        HTML 0.69%
+      </text>
+    </g>
+  </g><g transform="translate(0, 50)">
+    <g class="stagger" style="animation-delay: 750ms">
+      <circle cx="5" cy="6" r="5" fill="#DA3434" />
+      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+        CMake 0.27%
+      </text>
+    </g>
+  </g><g transform="translate(0, 75)">
+    <g class="stagger" style="animation-delay: 900ms">
+      <circle cx="5" cy="6" r="5" fill="#701516" />
+      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+        Ruby 0.05%
+      </text>
+    </g>
+  </g><g transform="translate(0, 100)">
+    <g class="stagger" style="animation-delay: 1050ms">
+      <circle cx="5" cy="6" r="5" fill="#427819" />
+      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+        Makefile 0.05%
+      </text>
+    </g>
+  </g></g>
+    </g>
+  
+    </svg>
+  
+        </g>
+      </svg>
+    
