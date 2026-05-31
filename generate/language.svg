@@ -1,0 +1,46 @@
+<svg width="350" height="165" viewBox="0 0 350 165" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Daofeng Qianlin stack map</title>
+  <desc id="desc">A compact map of languages, platforms, and tools.</desc>
+  <style>
+    .title { font: 700 18px "Segoe UI", Ubuntu, sans-serif; fill: #ff79c6; }
+    .name { font: 600 12px "Segoe UI", Ubuntu, sans-serif; fill: #f8f8f2; }
+    .note { font: 500 11px "Segoe UI", Ubuntu, sans-serif; fill: #b8b8c8; }
+    .bar { animation: grow .9s ease-out forwards; transform-origin: left; transform-box: fill-box; transform: scaleX(0); }
+    @keyframes grow { to { transform: scaleX(1); } }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="350" y2="165">
+      <stop stop-color="#141321"/>
+      <stop offset="1" stop-color="#1f1630"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#ff79c6"/>
+      <stop offset=".5" stop-color="#ffb86c"/>
+      <stop offset="1" stop-color="#8be9fd"/>
+    </linearGradient>
+  </defs>
+  <rect width="350" height="165" rx="14" fill="url(#bg)"/>
+  <text x="24" y="34" class="title">Stack Map</text>
+  <text x="250" y="34" class="note">mixed-field</text>
+  <g transform="translate(24 54)">
+    <text x="0" y="10" class="name">C / C++</text>
+    <rect x="92" y="1" width="205" height="12" rx="6" fill="#2a213b"/>
+    <rect class="bar" x="92" y="1" width="178" height="12" rx="6" fill="url(#bar)"/>
+  </g>
+  <g transform="translate(24 78)">
+    <text x="0" y="10" class="name">Go / Python</text>
+    <rect x="92" y="1" width="205" height="12" rx="6" fill="#2a213b"/>
+    <rect class="bar" x="92" y="1" width="164" height="12" rx="6" fill="url(#bar)" style="animation-delay:.1s"/>
+  </g>
+  <g transform="translate(24 102)">
+    <text x="0" y="10" class="name">TypeScript</text>
+    <rect x="92" y="1" width="205" height="12" rx="6" fill="#2a213b"/>
+    <rect class="bar" x="92" y="1" width="145" height="12" rx="6" fill="url(#bar)" style="animation-delay:.2s"/>
+  </g>
+  <g transform="translate(24 126)">
+    <text x="0" y="10" class="name">HW / Linux</text>
+    <rect x="92" y="1" width="205" height="12" rx="6" fill="#2a213b"/>
+    <rect class="bar" x="92" y="1" width="188" height="12" rx="6" fill="url(#bar)" style="animation-delay:.3s"/>
+  </g>
+  <text x="24" y="154" class="note">STM32 · ESP32 · Rockchip · React · Docker · MinIO/S3</text>
+</svg>

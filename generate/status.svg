@@ -1,0 +1,50 @@
+<svg width="467" height="165" viewBox="0 0 467 165" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Daofeng Qianlin profile card</title>
+  <desc id="desc">Cyber Yinglong, hardware-flavored full-stack builder.</desc>
+  <style>
+    .title { font: 700 24px "Segoe UI", Ubuntu, sans-serif; fill: #ffb86c; }
+    .sub { font: 500 13px "Segoe UI", Ubuntu, sans-serif; fill: #a9fef7; }
+    .label { font: 600 12px "Segoe UI", Ubuntu, sans-serif; fill: #f8f8f2; }
+    .muted { font: 500 11px "Segoe UI", Ubuntu, sans-serif; fill: #b8b8c8; }
+    .glow { filter: drop-shadow(0 0 10px rgba(255, 184, 108, .55)); }
+    .line { stroke-dasharray: 240; stroke-dashoffset: 240; animation: draw 1.4s ease-out forwards; }
+    .fade { opacity: 0; animation: fade .65s ease-out forwards; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes fade { to { opacity: 1; } }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="467" y2="165">
+      <stop stop-color="#141321"/>
+      <stop offset=".55" stop-color="#1f1630"/>
+      <stop offset="1" stop-color="#101827"/>
+    </linearGradient>
+    <linearGradient id="energy" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ff6b00"/>
+      <stop offset=".55" stop-color="#ffb86c"/>
+      <stop offset="1" stop-color="#63f5ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="467" height="165" rx="14" fill="url(#bg)"/>
+  <path class="line" d="M24 121 C90 82, 138 146, 210 98 S318 45, 443 82" stroke="url(#energy)" stroke-width="2.5" opacity=".75"/>
+  <circle class="glow" cx="398" cy="41" r="25" fill="#ff6b00" opacity=".18"/>
+  <circle class="glow" cx="418" cy="59" r="38" fill="#63f5ff" opacity=".10"/>
+  <text x="26" y="42" class="title">Daofeng Qianlin</text>
+  <text x="28" y="66" class="sub">Cyber Yinglong · hardware-flavored full-stack builder</text>
+  <g class="fade" style="animation-delay:.2s">
+    <rect x="28" y="88" width="100" height="24" rx="7" fill="#2a213b"/>
+    <text x="41" y="104" class="label">Embedded</text>
+  </g>
+  <g class="fade" style="animation-delay:.3s">
+    <rect x="136" y="88" width="82" height="24" rx="7" fill="#2a213b"/>
+    <text x="151" y="104" class="label">Backend</text>
+  </g>
+  <g class="fade" style="animation-delay:.4s">
+    <rect x="226" y="88" width="82" height="24" rx="7" fill="#2a213b"/>
+    <text x="243" y="104" class="label">Frontend</text>
+  </g>
+  <g class="fade" style="animation-delay:.5s">
+    <rect x="316" y="88" width="118" height="24" rx="7" fill="#2a213b"/>
+    <text x="331" y="104" class="label">Linux / Ops</text>
+  </g>
+  <text x="28" y="136" class="muted">Callsign BH5UVN · self-hosted systems · expressive hardware</text>
+</svg>

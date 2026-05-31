@@ -1,0 +1,44 @@
+name: Generate README cards
+
+on:
+  schedule:
+    - cron: "0 21 * * *"
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate language card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&hide_border=true&layout=compact&langs_count=10&theme=radical&card_width=350
+          path: generate/language.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate status card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&hide_border=true&show_icons=true&theme=radical&hide_title=true
+          path: generate/status.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit generated cards
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add generate/*.svg
+          if ! git diff --quiet HEAD -- generate/status.svg generate/language.svg; then
+            git commit -m "Update README cards"
+            git push
+          else
+            echo "No card changes."
+          fi
